@@ -10,17 +10,40 @@
 
 <body>
 
-    <div class="text-center">
+    <script>
+        
+        const displayok = () => {
+            document.getElementById('divok').style.display = 'block';
+        };
 
+        const hideLoading = () => {
+            document.getElementById('solicita').style.display = 'none';
+        };
+
+        setTimeout(() => {
+            hideLoading();
+            displayok();
+        }, 2000);
+    </script>
+    
+    <div id="solicita" class="text-center">
         
         <hr />
-        <p>Ya casi terminamos la solictud de tu tarjeta!!!</p>
-
+        <p>Ya casi terminamos la solicitud de tu tarjeta!!!</p>
 
         <div class="center spinner-border text-danger" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="sr-only">test...</span>
         </div>
     </div>
+
+    <div id="divok" style="display:none;" class="text-center">
+        <hr />
+        <div class="alert alert-success" role="alert">
+            Solicitud OK!!!
+        </div>
+        <hr />
+    </div>
+
 
     <hr />
 
